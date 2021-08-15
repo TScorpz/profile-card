@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    font-family: KumbhSans;
+    font-size: 18px;
+    color: hsl(0, 0%, 59%);
+    background: hsl(185, 75%, 39%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url('images/bg-pattern-bottom.svg'), url('images/bg-pattern-top.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 600px, 600px;
+    background-position: calc(50vw) calc(50vh), calc(50vw - 600px) calc(50vh - 600px);
+}
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.card-wrapper {
+    min-width: 250px;
+    max-width: 350px;
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+}
+
+.card {
+    width: 90%;
+    height: 350px;
+    background: white url('images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    margin: auto;
+    border-radius: 13px;
+    text-align: center;
+}
+
+.card span {
+    font-weight: bold;
+    color: hsl(229, 23%, 23%);
+}
+
+.hero {
+    height: 77%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    line-height: 25px;
+    border-bottom: hsl(0, 0%, 89%) 1px solid;
+}
+
+.photo {
+    width: 90px;
+    height: 90px;
+    background-image: url('images/image-victor.jpg');
+    border: white 5px solid;
+    border-radius: 50%;
+    margin-top: 75px;
+}
+
+.info {
+    margin-top: 20px;
+}
+
+.city {
+    font-size: smaller;
+}
+
+.stats {
+    height: 22%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3px 20px;
+}
+
+.stats p {
+    margin: 5px;
+    font-size: x-small;
+}
+
+.footer {
+    width: 100%;
+    /* font-size: small; */
+    font-size: 0.7rem;
+    text-align: center;
+    color: black;
+}
+
+.footer a {
+    color:gold;
+    text-decoration: none;
+}
+
+.fade-in {
+    animation: opac 2s
+}
+
+.zoom-in {
+    animation: zoomin .5s
+}
+
+.color-flow {
+    animation: changeColor 15s infinite;
+}
+
+@keyframes opac{
+    from{opacity:0} 
+    to{opacity:1}
+}
+
+@keyframes zoomin{
+    from{transform: scale(0, 0); opacity: 0} 
+    to{transform: scale(1, 1); opacity: 100%}
+}
+
+@keyframes changeColor {
+    0% {
+        color:gold;
+    }
+    25% {
+        color: greenyellow;
+    }
+    50% {
+        color:lightblue;
+    }
+    75% {
+        color:yellowgreen;
+    }
+    100% {
+        color: gold;
+    }
+}
+
+@font-face {
+    font-family: KumbhSans;
+    src: url('fonts/Kumbh_Sans/KumbhSans-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: KumbhSans;
+    src: url('fonts/Kumbh_Sans/KumbhSans-Bold.ttf');
+    font-weight: 700;
+}
